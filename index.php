@@ -1,13 +1,13 @@
 s<?php
-$i = 0
-if($i==0){daasdasdasdasdasdasdasdasdasd
-echo "prueba";sasdasdasdasdasdads
-}
-for($i=0){dasdasdasdadasdasdasdasdasdasdasd
-}
-
-dasdasdasdasdasdadasdadas
-
+$i = 0dasd
+if($i==0asd){daasdasdasdasdasdasdasdasdasd
+echo "aspasdasdadrueba";sasdasdasdasdasdads
+}sdasd
+fsador($i=0){dasdasdasdadasdasdasdasdasdasdasd
+}d
+dadasdasdasdsdas
+dfdsgsdvdasfcxczdasdasdafasfasfasfasdsadascxzczxczdfadfasdasdadasdadas
+dasdasda
 
 
 
