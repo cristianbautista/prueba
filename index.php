@@ -13,13 +13,6 @@ dasdasda
 
 fdsfdsfdsfsdfdsfdsfdsfdsfdsfsdffdf
 
-<<<<<<< HEAD
-dasdasdasdasdadasd
-
-=======
-hodaasdasdacnlasnfasldkacmalckmasl
->>>>>>> b690d07cc29abfaf53be5efca345e14b4553d2a7
-
 
 
 
