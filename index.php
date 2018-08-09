@@ -1,6 +1,6 @@
 s<?php
 $i = 0dasd
-if($i==0asd){daasdasdasdasdasdasdasdasdasd
+isssssssssssssssssssssssssssssssssssssssf($i==0asd){daasdasdasdasdasdasdasdasdasd
 edlasñdkasñldkasñldkasñldkasdñlkañldkasñldcho "aspasdasdadrueba";sasdasdasdasdasdads
 }sdasd
 fsador($i=0){dasdasdasdadasdasdasdasdasdasdasd
