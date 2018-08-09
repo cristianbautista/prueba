@@ -1,7 +1,7 @@
 s<?php
 $i = 0dasd
 if($i==0asd){daasdasdasdasdasdasdasdasdasd
-echo "aspasdasdadrueba";sasdasdasdasdasdads
+edlasñdkasñldkasñldkasñldkasdñlkañldkasñldcho "aspasdasdadrueba";sasdasdasdasdasdads
 }sdasd
 fsador($i=0){dasdasdasdadasdasdasdasdasdasdasd
 }d
