@@ -8,7 +8,7 @@
 		{
 			"name": "Create club",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"url": null
 			},
@@ -17,7 +17,7 @@
 		{
 			"name": "Create player without team",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"url": null
 			},
