@@ -2,31 +2,32 @@
 
 namespace App\Controller\Club;
 
-use App\Services\Club\ClubRegisterService;
+use App\Services\Club\AssignCoachToTeamService;
+use App\Services\Club\AssignPlayerToCoachService;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\SerializerInterface;
 
-class Register
+class AssignCoachToClub
 {
-    private ClubRegisterService $clubRegisterService;
+    private AssignCoachToTeamService $assignCoachToTeamService;
     private SerializerInterface $serializer;
-    public function __construct(ClubRegisterService $clubRegisterService, SerializerInterface $serializer)
+    public function __construct(AssignCoachToTeamService $assignPlayerToCoachService, SerializerInterface $serializer)
     {
-        $this->clubRegisterService = $clubRegisterService;
+        $this->assignCoachToTeamService = $assignPlayerToCoachService;
         $this->serializer = $serializer;
     }
 
     /**
      * @param Request $request
      * @return JsonResponse
-     * @Route("/api/create-club", methods={"POST"})
+     * @Route("/api/create-coach-to-team", methods={"POST"})
      */
     public function register(Request $request): JsonResponse
     {
         return new JsonResponse(
-            $this->serializer->serialize($this->clubRegisterService->create($request), 'json'),
+            $this->serializer->serialize($this->assignCoachToTeamService->create($request), 'json'),
             JsonResponse::HTTP_CREATED,
             [],
             true

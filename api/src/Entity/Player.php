@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Player
  *
- * @ORM\Table(name="player", indexes={@ORM\Index(name="idClub", columns={"idClub"})})
+ * @ORM\Table(name="player", uniqueConstraints={@ORM\UniqueConstraint(name="name", columns={"name"})}, indexes={@ORM\Index(name="idClub", columns={"idClub"}), @ORM\Index(name="name_idx_player", columns={"name"})})
  * @ORM\Entity
  */
 class Player
@@ -36,9 +36,9 @@ class Player
     private $dorsal;
 
     /**
-     * @var int
+     * @var int|null
      *
-     * @ORM\Column(name="salary", type="integer", nullable=false)
+     * @ORM\Column(name="salary", type="integer", nullable=true)
      */
     private $salary;
 
@@ -86,7 +86,7 @@ class Player
         return $this->salary;
     }
 
-    public function setSalary(int $salary): self
+    public function setSalary(?int $salary): self
     {
         $this->salary = $salary;
 

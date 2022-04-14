@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "d3d6b26b-609a-49b4-b9a2-9c59aadac460",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create club",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Create player without team",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Create coach without team",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"name\": \"Jose Mourinho\"\n}"
+				},
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Add player to club",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"name\": \"Vinicius Junior\",\n     \"dorsal\": 10,\n     \"nameTeam\": \"Real Madrid \"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:40/api/create-team-to-team",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "40",
+					"path": [
+						"api",
+						"create-team-to-team"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Coach to Team",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:40/api/create-coach-to-team",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "40",
+					"path": [
+						"api",
+						"create-coach-to-team"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Player by filter",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"name\": \"Real Madrid \"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:40/api/list-player-by-filter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "40",
+					"path": [
+						"api",
+						"list-player-by-filter"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

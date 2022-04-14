@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Exception;
+
+namespace App\Exception\Player;
 
 use Symfony\Component\HttpKernel\Exception\ConflictHttpException;
 
-class ClubAlreadyExistException extends ConflictHttpException
+class ExceedSalaryLimitException extends ConflictHttpException
 {
-    private const MESSAGE = 'Club with name %s already exist';
+    private const MESSAGE = 'The player %s exceed the salary limit';
 
     public static function fromName($name): self
     {

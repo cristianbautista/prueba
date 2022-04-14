@@ -3,7 +3,7 @@
 namespace App\Services\Club;
 
 use App\Entity\Club;
-use App\Exception\ClubAlreadyExistException;
+use App\Exception\Club\ClubAlreadyExistException;
 use App\Repository\ClubRepository;
 use App\Services\Request\RequestService;
 use Symfony\Component\HttpFoundation\Request;

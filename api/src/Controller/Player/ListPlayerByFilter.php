@@ -1,35 +1,36 @@
 <?php
 
-namespace App\Controller\Club;
+namespace App\Controller\Player;
 
-use App\Services\Club\ClubRegisterService;
+use App\Services\Player\ListPlayerByFilterService;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\SerializerInterface;
 
-class Register
+class ListPlayerByFilter
 {
-    private ClubRegisterService $clubRegisterService;
+    private ListPlayerByFilterService $listPlayerByFilterService;
     private SerializerInterface $serializer;
-    public function __construct(ClubRegisterService $clubRegisterService, SerializerInterface $serializer)
+    public function __construct(ListPlayerByFilterService $listPlayerByFilterService, SerializerInterface $serializer)
     {
-        $this->clubRegisterService = $clubRegisterService;
+        $this->listPlayerByFilterService = $listPlayerByFilterService;
         $this->serializer = $serializer;
     }
 
     /**
      * @param Request $request
      * @return JsonResponse
-     * @Route("/api/create-club", methods={"POST"})
+     * @Route("/api/list-player-by-filter", methods={"GET"})
      */
     public function register(Request $request): JsonResponse
     {
         return new JsonResponse(
-            $this->serializer->serialize($this->clubRegisterService->create($request), 'json'),
+            $this->serializer->serialize($this->listPlayerByFilterService->execute($request), 'json'),
             JsonResponse::HTTP_CREATED,
             [],
             true
         );
     }
+
 }

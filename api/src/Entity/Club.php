@@ -7,9 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Club
  *
- * @ORM\Table(name="club",
- *     uniqueConstraints={@ORM\UniqueConstraint(name="name", columns={"name"})},
- *     indexes={@ORM\Index(name="name_idx", columns={"name"})})
+ * @ORM\Table(name="club", uniqueConstraints={@ORM\UniqueConstraint(name="name", columns={"name"})}, indexes={@ORM\Index(name="name_idx", columns={"name"})})
  * @ORM\Entity
  */
 class Club
@@ -65,4 +63,6 @@ class Club
 
         return $this;
     }
+
+
 }
